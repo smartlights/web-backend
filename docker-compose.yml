@@ -1,0 +1,20 @@
+version: '3'
+services:
+  post-lights:
+    network_mode: host
+    container_name: post-lights
+    build: ./build/post-lights/
+    command: sh -c "cd /home/app; npm start"
+    environment:
+      - NODE_ENV=development
+      - PORT=7000
+      - http_port=7000
+      - MYSQL_DB=database
+      - MYSQL_PW=password
+    ports:
+      - '7000:7000'
+    working_dir: /home/app
+    volumes:
+      - './functions/lights/post-lights:/home/app/function'
+      - './template/nodemon-armhf/db:/home/app/db'
+      - './template/nodemon-armhf/model:/home/app/model'
