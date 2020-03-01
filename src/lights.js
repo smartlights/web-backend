@@ -8,9 +8,9 @@ const lights = [
   {
     name: "br-lamp",
     id: "38372430b4e62d59a66d",
-    key: "8937bf0eeaa29032",
+    key: "2f8b0aaee7fb2e5b",
     ip: "192.168.1.193"
   }
 ];
 
-module.exports = lights;
+export default lights;

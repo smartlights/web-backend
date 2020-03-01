@@ -1,9 +1,0 @@
-version: 1.0
-provider:
-  name: openfaas
-  gateway: http://192.168.1.208:31112
-functions:
-  post-lights:
-    lang: nodemon-armhf
-    handler: ./functions/lights/post-lights
-    image: smartlights/post-lights:latest
