@@ -2,7 +2,7 @@ const lights = [
   {
     name: "br-ceiling",
     id: "73280536cc50e3512e46",
-    key: "6a4e7ae71218abca",
+    key: "bfeab6e8e923aa86",
     ip: "192.168.1.191"
   },
   {

@@ -17,7 +17,7 @@ app.post("/post-lights", (req: Request, res: Response) => {
   const { hexToRgb, rgbToHex, hsvToRgb, rgbToHsv } = helpers;
   const { hex, brightness, saturation, mode, temp, on, index } = req.body;
   const adjustedHue = rgbToHsv(...hexToRgb(hex))[0];
-  const adjustedRgb = hsvToRgb(adjustedHue, brightness, saturation);
+  const adjustedRgb = hsvToRgb(adjustedHue, saturation, brightness);
   const adjustedHex = `${rgbToHex(...adjustedRgb).split(".")[0]}00000000`;
 
   const data = on
